@@ -1,0 +1,9 @@
+@import "./../../styles/variables.scss";
+
+.header {
+  background-color: $standartColor;
+  .logo {
+    padding: 10px;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,19 @@
+@import "~normalize.css";
+@import url("https://fonts.googleapis.com/css2?family=Fascinate&family=Lato&family=Montserrat:wght@300;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  height: 100%;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

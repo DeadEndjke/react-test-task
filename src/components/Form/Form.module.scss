@@ -1,0 +1,26 @@
+@import "./../../styles/variables.scss";
+
+.form {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 500px;
+  border: 1px solid black;
+  .topbuttons {
+    margin: 15px 0 15px 0;
+    text-align: center;
+    button {
+      text-transform: uppercase;
+      padding: 10px;
+      border: none;
+    }
+    .active {
+      background-color: $standartColor;
+      color: $textcolor;
+      border-radius: 30px;
+    }
+    .inactive {
+      background-color: $textcolor;
+      color: $standartColor;
+    }
+  }
+}
