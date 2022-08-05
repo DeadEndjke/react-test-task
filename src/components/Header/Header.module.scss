@@ -3,7 +3,18 @@
 .header {
   background-color: $standartColor;
   .logo {
-    padding: 10px;
-    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 10px;
+      cursor: pointer;
+      span {
+        color: $textcolor;
+      }
+    }
   }
 }

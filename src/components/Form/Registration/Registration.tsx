@@ -18,27 +18,23 @@ const Registration = ({ setRegistration }: Props) => {
 
   const handleRegister = (email: string, password: string) => {
     const auth = getAuth();
-    alert("wow!");
     createUserWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log(user);
-
         dispatch(
           setUser({
             email: user.email,
-            id: user.uid,
             token: user.refreshToken,
+            id: user.uid,
           })
         );
-        navigate("/");
+
         alert("wow!");
-        console.log(auth);
       })
-      .catch(console.error);
+      .catch(() => alert("Invalid user!"));
   };
 
   return (
-    <form className={s.reg}>
+    <div className={s.reg}>
       <div className={s.formgroup}>
         <input
           placeholder="E-mail"
@@ -71,8 +67,7 @@ const Registration = ({ setRegistration }: Props) => {
       >
         submit
       </button>
-      <input type="submit" onSubmit={() => handleRegister(email, password)} />
-    </form>
+    </div>
   );
 };
 

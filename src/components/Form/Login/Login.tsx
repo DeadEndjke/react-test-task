@@ -7,9 +7,8 @@ import s from "./Login.module.scss";
 
 interface Props {
   setLogin: () => void;
-  setHeaderheader: () => void;
 }
-const Login = ({ setLogin, setHeaderheader }: Props) => {
+const Login = ({ setLogin }: Props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -18,24 +17,21 @@ const Login = ({ setLogin, setHeaderheader }: Props) => {
 
   const handleLogin = (email: string, password: string) => {
     const auth = getAuth();
-
     signInWithEmailAndPassword(auth, email, password)
       .then(({ user }) => {
-        console.log(user);
         dispatch(
           setUser({
             email: user.email,
-            token: user.refreshToken,
             id: user.uid,
+            token: user.refreshToken,
           })
         );
-
-        alert("wow!");
+        navigate("/");
       })
       .catch(() => alert("Invalid user!"));
   };
   return (
-    <form className={s.log}>
+    <div className={s.log}>
       <div className={s.formgroup}>
         <input
           placeholder="E-mail"
@@ -64,7 +60,7 @@ const Login = ({ setLogin, setHeaderheader }: Props) => {
       <button onClick={() => handleLogin(email, password)} className={s.submit}>
         submit
       </button>
-    </form>
+    </div>
   );
 };
 

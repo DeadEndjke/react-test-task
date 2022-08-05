@@ -11,10 +11,8 @@ import s from "./Form.module.scss";
 import Login from "./Login/Login";
 import Registration from "./Registration/Registration";
 
-interface Props {
-  setHeaderheader: () => void;
-}
-const Form = ({ setHeaderheader }: Props) => {
+interface Props {}
+const Form = (props: Props) => {
   const [logReg, setLogReg] = useState("log");
   const [active, setActive] = useState(0);
 
@@ -44,7 +42,7 @@ const Form = ({ setHeaderheader }: Props) => {
         </button>
       </div>
       {logReg === "log" ? (
-        <Login setLogin={setLogin} setHeaderheader={setHeaderheader} />
+        <Login setLogin={setLogin} />
       ) : (
         <Registration setRegistration={setRegistration} />
       )}
