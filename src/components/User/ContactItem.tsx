@@ -1,6 +1,7 @@
 import React from "react";
 import { useAppDispatch } from "../../hooks/reduxhooks";
 import { removeContact } from "./../../store/slices/contactSlice/slice";
+import s from "./User.module.scss";
 
 interface ContactItemProps {
   id: string;
@@ -15,9 +16,14 @@ export const ContactItem: React.FC<ContactItemProps> = ({
 }) => {
   const dispatch = useAppDispatch();
   return (
-    <div>
-      Name:<span>{name}</span> - Email:<span>{email}</span>
-      <button onClick={() => dispatch(removeContact(id))}>&nbsp;x</button>
+    <div className={s.item}>
+      <div className={s.titleandbtn}>
+        {" "}
+        <div className={s.title}>
+          Name : &nbsp;<span>{name}</span> - Email :&nbsp;<span>{email}</span>
+        </div>
+        <button onClick={() => dispatch(removeContact(id))}>x</button>
+      </div>
     </div>
   );
 };

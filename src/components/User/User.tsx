@@ -36,6 +36,7 @@ export const User = (props: Props) => {
         onChange={(event) => setName(event.target.value)}
       />
       <input
+        id="email"
         placeholder="enter email"
         type="email"
         value={email}

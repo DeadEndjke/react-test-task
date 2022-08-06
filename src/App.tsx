@@ -12,35 +12,8 @@ function App() {
     <div className={s.App}>
       <Header />
       <Routes>
-        {isAuth ? (
-          <Route
-            path="/"
-            element={
-              <div>
-                <h1>
-                  Войдите в свой личный кабинет, где вы можете создать контакты,
-                  нажав на кнопку "myAccount"
-                </h1>
-              </div>
-            }
-          />
-        ) : (
-          <Route
-            path="/"
-            element={
-              <div>
-                <h1>
-                  {" "}
-                  Зарегестрируйтесь или войдите в свой аккаунт, нажав на кнопку
-                  "Войти"
-                </h1>
-              </div>
-            }
-          />
-        )}
-        {/*  */}
-        {/* Войдите в свой личный кабинет, где вы можете создать контакты, нажав на кнопку "myAccount" */}
         <Route path="/login" element={<Form />} />
+        {isAuth ? <Route path="/" element={<Navigate to={"/user"} />} /> : ""}
         {isAuth ? (
           <Route path="/user" element={<User />} />
         ) : (
