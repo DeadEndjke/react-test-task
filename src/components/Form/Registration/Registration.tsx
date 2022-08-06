@@ -28,7 +28,7 @@ const Registration = ({ setRegistration }: Props) => {
           })
         );
 
-        alert("wow!");
+        navigate("/");
       })
       .catch(() => alert("Invalid user!"));
   };

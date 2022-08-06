@@ -15,7 +15,9 @@ const Header = (props: Props) => {
         <div className={s.logo}>
           <NavLink to={"/user"}>
             <SvgSelector id="logo" />
+            <span>myAccount</span>
           </NavLink>
+          <NavLink to={"/"}>Home</NavLink>
           <button onClick={() => dispatch(removeUser())}>
             Log out from {email}
           </button>
