@@ -30,7 +30,7 @@ const Registration = ({ setRegistration }: Props) => {
 
         navigate("/");
       })
-      .catch(() => alert("Invalid user!"));
+      .catch((e) => alert(e.message));
   };
 
   return (

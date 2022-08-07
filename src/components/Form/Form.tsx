@@ -1,12 +1,5 @@
-import {
-  createUserWithEmailAndPassword,
-  getAuth,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
-import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../hooks/reduxhooks";
-import { setUser } from "../../store/slices/userSlice";
+import { useState } from "react";
+
 import s from "./Form.module.scss";
 import Login from "./Login/Login";
 import Registration from "./Registration/Registration";

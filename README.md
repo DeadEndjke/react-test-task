@@ -16,6 +16,11 @@
 
 `npm i firebase`
 
+`npm i --save lodash`
+
+npm i --save lodash.debounce
+npm i --save-dev @types/lodash.debounce
+
 Скачать файл .env.local из письма и закинуть его в корень проекта
 
 `npm start`

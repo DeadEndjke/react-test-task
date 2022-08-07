@@ -19,6 +19,7 @@ function App() {
         ) : (
           <Route path="/user" element={<Navigate to={"/login"} />} />
         )}
+        <Route path="*" element={<Navigate to={"/"} />} />
       </Routes>
     </div>
   );

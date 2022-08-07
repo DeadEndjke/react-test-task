@@ -8,22 +8,13 @@ type Props = {};
 
 export const User = (props: Props) => {
   const dispatch = useDispatch();
-  const [isInitialRender, setIsInitialRender] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [contact, setContact] = useState({
-    id: new Date().toISOString(),
-    name: name,
-    email: email,
-  });
-
-  useEffect(() => {
-    setIsInitialRender(false);
-    setContact({ id: new Date().toISOString(), name: name, email: email });
-  }, [contact, isInitialRender]);
 
   const handleContact = () => {
-    dispatch(addContact(contact));
+    dispatch(addContact({ id: new Date().toISOString(), name, email }));
+    setName("");
+    setEmail("");
   };
 
   return (
