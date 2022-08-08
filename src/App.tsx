@@ -13,7 +13,11 @@ function App() {
       <Header />
       <Routes>
         <Route path="/login" element={<Form />} />
-        {isAuth ? <Route path="/" element={<Navigate to={"/user"} />} /> : ""}
+        {isAuth ? (
+          <Route path="/" element={<Navigate to={"/user"} />} />
+        ) : (
+          <Route path="/" element={<Navigate to={"/login"} />} />
+        )}
         {isAuth ? (
           <Route path="/user" element={<User />} />
         ) : (

@@ -1,6 +1,16 @@
 @import "./../../styles/variables.scss";
 .user {
   text-align: center;
+  
+  .form{
+    border: 1px solid black;
+    width: 400px;
+    display: flex;
+  flex-direction: column;
+    margin: 0 auto;
+   
+  }
+ 
 }
 .item {
   border-radius: 5px;
@@ -37,5 +47,6 @@
 }
 .table {
   display: flex;
+  padding-left: 0;
   flex-direction: column;
 }
