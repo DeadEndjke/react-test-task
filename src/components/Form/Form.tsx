@@ -4,8 +4,7 @@ import s from "./Form.module.scss";
 import Login from "./Login/Login";
 import Registration from "./Registration/Registration";
 
-interface Props {}
-const Form = (props: Props) => {
+const Form = () => {
   const [logReg, setLogReg] = useState("log");
   const [active, setActive] = useState(0);
 

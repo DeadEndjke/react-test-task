@@ -5,12 +5,10 @@ import { Routes, Route } from "react-router-dom";
 import { useAuth } from "./hooks/useAuth";
 import { Navigate } from "react-router-dom";
 import { User } from "./components/User/User";
-import { useState } from "react";
 import { NotFound } from "./components/NotFound/NotFound";
 
 function App() {
   const { isAuth } = useAuth();
-  const [isValidAdress, setIsValidAdress] = useState(true);
   return (
     <div className={s.App}>
       <Header />

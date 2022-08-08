@@ -4,9 +4,7 @@ import { addContact } from "./../../store/slices/contactSlice/slice";
 import { ContactList } from "./ContactList";
 import s from "./User.module.scss";
 
-type Props = {};
-
-export const User = (props: Props) => {
+export const User = () => {
   const dispatch = useDispatch();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
